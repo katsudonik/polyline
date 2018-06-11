@@ -7,7 +7,7 @@
 ```
 * npm 3.10.10
 * nodejs v6.14.2
-* phantomjs
+* phantomjs@2.1.7
 * httpd
 
 # setting
