@@ -5,7 +5,7 @@
 ```
 /usr/local/pyenv/
 ```
-* folium
+* folium==0.5.0
 * npm 3.10.10
 * nodejs v6.14.2
 * phantomjs@2.1.7
