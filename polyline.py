@@ -4,18 +4,27 @@ print("Content-Type: text/html\n")
 
 import folium
 import numpy as np
+import math
 
 points = []
 points.append([35.658505, 139.802043])
 points.append([35.661617, 139.802349])
 points.append([35.660445, 139.800450])
+points.append([35.660445, 139.811724])
+
+
 
 points = np.array(points)
 location = [( np.max(points[:,0]) + np.min(points[:,0]) ) / 2, ( np.max(points[:,1]) + np.min(points[:,1]) ) / 2]
 
+width = np.max([( np.max(points[:,0]) - np.min(points[:,0]) ),  ( np.max(points[:,1]) - np.min(points[:,1]) )])
+
 points = points.tolist()
 
-m = folium.Map(location=location, zoom_start=15)
+x = width
+zoom = math.log(5*x/10240, 0.5)
+
+m = folium.Map(location=location, zoom_start=zoom)
 folium.PolyLine(points).add_to(m)
 folium.Marker(points[0], popup='Mt. Hood Meadows').add_to(m)
 folium.Marker(points[1], popup='Timberline Lodge').add_to(m)
