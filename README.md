@@ -28,3 +28,11 @@
 
 </Directory>
 ```
+
+# run
+```
+python screenshot.py 
+```
+
+# view img:  
+http://localhost:8080/polyline.png
