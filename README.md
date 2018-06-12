@@ -28,8 +28,10 @@
 
 </Directory>
 ```
-* polyline.py
+* polyline.py  
 deploy on "/var/www/cgi-bin/"
+* screenshot.py  
+deploy
 
 # run
 ```
