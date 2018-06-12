@@ -28,6 +28,8 @@
 
 </Directory>
 ```
+* polyline.py
+deploy on "/var/www/cgi-bin/"
 
 # run
 ```
