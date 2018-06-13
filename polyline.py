@@ -10,7 +10,7 @@ points = []
 points.append([35.658505, 139.802043])
 points.append([35.661617, 139.802349])
 points.append([35.660445, 139.800450])
-points.append([35.660445, 139.811724])
+#points.append([35.660445, 159.809724])
 
 
 
@@ -22,7 +22,13 @@ width = np.max([( np.max(points[:,0]) - np.min(points[:,0]) ),  ( np.max(points[
 points = points.tolist()
 
 x = width
-zoom = math.log(5*x/10240, 0.5)
+
+#zoom = math.log(5*x/12280, 0.5)
+zoom = math.log(5*x/9500, 0.5)
+
+#print(width)
+#print(" ")
+#print(zoom)
 
 m = folium.Map(location=location, zoom_start=zoom)
 folium.PolyLine(points).add_to(m)
