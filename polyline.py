@@ -32,10 +32,8 @@ zoom = math.log(5*x/9500, 0.5)
 
 m = folium.Map(location=location, zoom_start=zoom)
 folium.PolyLine(points).add_to(m)
-folium.Marker(points[0], popup='Mt. Hood Meadows').add_to(m)
-folium.Marker(points[1], popup='Timberline Lodge').add_to(m)
-folium.Marker(points[2], popup='Timberline Lodge').add_to(m)
-
+for point in points:
+  folium.Marker(point).add_to(m)
 print(m.get_root().render())
 
 #m.save(outfile="map.html")
