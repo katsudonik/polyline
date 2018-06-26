@@ -40,3 +40,33 @@ python screenshot.py
 
 # view img:  
 http://localhost:8080/polyline.png
+
+
+## CO2 emissions
+
+### emissions_per_unit[kg-CO2/L]
+https://e-reverse.backlog.jp/ViewAttachmentPdf.action?attachmentId=6324303
+
+### by distance
+#### required params
+* fuel_efficient[km/L]
+* distance[km]
+* fuel
+
+#### function
+```
+emissions = (emissions_per_unit / fuel_efficient) * distance
+```
+### by hour
+#### required params
+* fuel_consumption_rate[L/kw･h]
+* engine_output[kw]
+* fuel_efficient_by_hour[L/h]: fuel_consumption_rate * engine_output
+* hour[h]
+* fuel
+#### function
+```
+emissions = (emissions_per_unit / fuel_efficient_by_hour) * hour
+```
+
+
