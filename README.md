@@ -45,7 +45,7 @@ http://localhost:8080/polyline.png
 ## CO2 emissions
 
 ### emissions_per_unit[kg-CO2/L]
-https://e-reverse.backlog.jp/ViewAttachmentPdf.action?attachmentId=6324303
+https://www.env.go.jp/council/16pol-ear/y164-04/mat04.pdf
 
 ### by distance
 #### required params
