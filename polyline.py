@@ -8,8 +8,8 @@ import math
 
 points = []
 points.append([35.658505, 139.802043])
-points.append([35.661617, 139.802349])
 points.append([35.660445, 139.800450])
+points.append([35.661617, 139.802349])
 #points.append([35.660445, 159.809724])
 
 
@@ -31,7 +31,7 @@ zoom = math.log(5*x/9500, 0.5)
 #print(zoom)
 
 m = folium.Map(location=location, zoom_start=zoom)
-folium.PolyLine(points).add_to(m)
+folium.PolyLine(points, color='red').add_to(m)
 for point in points:
   folium.Marker(point).add_to(m)
 print(m.get_root().render())
