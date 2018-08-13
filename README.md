@@ -76,3 +76,8 @@ emissions = (emissions_per_unit * fuel_efficient_per_hour) * hour
 ```
 
 
+## distance
+* distance.py: use "Geographical Survey Institute API"
+* distance_by_hubeny.ipynb: uses "hubeny" (The error continues to increase at over 50 km)
+* distance_by_hubeny_vs_vincenty.ipynb: use "vincenty python library" contains bug! (large error)
+
