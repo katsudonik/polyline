@@ -1,5 +1,9 @@
 from selenium import webdriver
-import cv2
+#import cv2
+from PIL import Image
+import sys
+import os
+import re
 
 driver = webdriver.PhantomJS()
 driver.set_window_size(1922, 1922)
@@ -8,9 +12,10 @@ driver.save_screenshot('/var/www/html/polyline.png')
 driver.close()
 
 
+quality = 100
+input_path = '/var/www/html/polyline'
+output_path = '/var/www/html/polyline' + str(quality)
 
-rate = 9
-compression_params = [int(cv2.IMWRITE_PNG_COMPRESSION), rate]
-img = cv2.imread('/var/www/html/polyline.png', cv2.IMREAD_UNCHANGED)
-#cv2.imwrite('/var/www/html/polyline' + str(rate) + '.png', img, compression_params)
-cv2.imwrite('/var/www/html/polyline.png', img, compression_params)
+input_im = Image.open(input_path + ".png")
+rgb_im = input_im.convert('RGB')
+rgb_im.save(output_path + ".jpg",quality=quality)
