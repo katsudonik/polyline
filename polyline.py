@@ -22,7 +22,7 @@ def get_map(center, zoom):
   return folium.Map(location=center, zoom_start=zoom)
 
 def draw_polyline(m, points):
-  folium.PolyLine(points, color='red').add_to(m)
+  folium.PolyLine(points, color='blue').add_to(m)
 
 def draw_marker(m, point, color):
 #  folium.Marker(point).add_to(m)
