@@ -12,7 +12,7 @@ driver.save_screenshot('/var/www/html/polyline.png')
 driver.close()
 
 
-quality = 100
+quality = 30
 input_path = '/var/www/html/polyline'
 output_path = '/var/www/html/polyline' + str(quality)
 
