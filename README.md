@@ -49,24 +49,35 @@ https://www.env.go.jp/council/16pol-ear/y164-04/mat04.pdf
 
 ### by distance
 #### required params
-* fuel_efficient[km/L]
+* distance_per_fuel[km/L]
 * distance[km]
-* fuel
+
+#### const
+* emissions_per_unit[kg-CO2/L]
 
 #### function
 ```
-emissions = (emissions_per_unit / fuel_efficient) * distance
+emissions = (emissions_per_unit / distance_per_fuel) * distance
 ```
 ### by hour
 #### required params
 * fuel_consumption_rate[L/kw･h]
 * engine_output[kw]
-* fuel_efficient_by_hour[L/h]: fuel_consumption_rate * engine_output
+* fuel_efficient_per_hour[L/h]: fuel_consumption_rate * engine_output
 * hour[h]
 * fuel
+
+#### const
+* emissions_per_unit[kg-CO2/L]
+
 #### function
 ```
-emissions = (emissions_per_unit / fuel_efficient_by_hour) * hour
+emissions = (emissions_per_unit * fuel_efficient_per_hour) * hour
 ```
 
+
+## distance
+* distance.py: use "Geographical Survey Institute API"
+* distance_by_hubeny.ipynb: uses "hubeny" (The error continues to increase at over 50 km)
+* distance_by_hubeny_vs_vincenty.ipynb: use "vincenty python library" contains bug! (large error)
 
