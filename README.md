@@ -9,6 +9,7 @@
 * npm 3.10.10
 * nodejs v6.14.2
 * phantomjs@2.1.7
+* opencv 3.4.2
 * httpd
 
 # setting
