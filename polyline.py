@@ -14,7 +14,6 @@ def get_width(points):
   return np.max([( np.max(points[:,0]) - np.min(points[:,0]) ),  ( np.max(points[:,1]) - np.min(points[:,1]) )])
 
 def get_zoom_rate(width):
-  #print(width)
   #zoom = math.log(5*x/12280, 0.5)
   return math.log(5*width/9500, 0.5)
 
@@ -25,7 +24,6 @@ def draw_polyline(m, points):
   folium.PolyLine(points, color='blue').add_to(m)
 
 def draw_marker(m, point, color):
-#  folium.Marker(point).add_to(m)
   folium.Marker(location=point, icon=folium.Icon(color=color)).add_to(m)
 
 
@@ -46,8 +44,6 @@ _points = np.array(_points)
 
 center = get_center(_points)
 zoom = get_zoom_rate(get_width(_points))
-#print(" ")
-#print(zoom)
 
 m = get_map(center, zoom)
 
