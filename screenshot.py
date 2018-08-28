@@ -1,5 +1,4 @@
 from selenium import webdriver
-#import cv2
 from PIL import Image
 import sys
 import os
